@@ -1,4 +1,4 @@
-install.packages("librarian")
+install.packages("librarian", repos = "http://cran.us.r-project.org")
 librarian::shelf(
     tidyverse
     , keras
@@ -37,11 +37,9 @@ librarian::shelf(
     , quiet = T
 )
 
-install.packages("remotes")
-install.packages("dagitty")
-install.packages("ggdag")
+install.packages("remotes", repos = "http://cran.us.r-project.org")
+install.packages("dagitty", repos = "http://cran.us.r-project.org")
+install.packages("ggdag", repos = "http://cran.us.r-project.org")
 
 remotes::install_github("cran/ORCI")
 remotes::install_github("malcolmbarrett/ggdag")
-
-tensorflow::install_tensorflow()
