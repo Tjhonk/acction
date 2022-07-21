@@ -32,7 +32,7 @@ jobs:
         with:
           use-public-rspm: true
 
-      - run: Rscript requirements/ref_r_0.r
+      - run: Rscript ref/ref_r_0.r
         shell: bash
       # requirements/ref_r_0.r
 
@@ -64,11 +64,11 @@ jobs:
         with:
           use-public-rspm: true
 
-      - run: Rscript requirements/ref_r_1.r
+      - run: Rscript ref/ref_r_1.r
 
       - id: Julia
         name: Julia_IP
-        run: juila requirements/ref_jl_1.jl
+        run: juila ref/ref_jl_1.jl
         shell: bash
 
   to_build:
