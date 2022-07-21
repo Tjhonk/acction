@@ -32,7 +32,7 @@ jobs:
         with:
           use-public-rspm: true
 
-      - run: Rscript requirements/ref_r_0.jl
+      - run: Rscript requirements/ref_r_0.r
 
   Python_requ:
     runs-on: ubuntu-22.04
