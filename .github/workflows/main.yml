@@ -17,7 +17,7 @@ jobs:
     # - uses: julia-actions/setup-julia@v1
       # with:
       #   version: 1.5.3
-    - run: julia requirements/ref_jl_0.jl
+    - run: julia ref/ref_jl_0.jl
       shell: bash
     
   R-CMD-check:
@@ -32,7 +32,7 @@ jobs:
         with:
           use-public-rspm: true
 
-      - run: Rscript ref/ref_r_0.r
+      - run: Rscript ref/ref0.r
         shell: bash
       # requirements/ref_r_0.r
 
@@ -50,7 +50,7 @@ jobs:
         with:
           python-version: '3.8'
           cache: 'pip'
-      - run: pip install -r requirements/requirements.txt
+      - run: pip install -r ref/requirements.txt
 
 
   r_jl: 
@@ -64,7 +64,7 @@ jobs:
         with:
           use-public-rspm: true
 
-      - run: Rscript ref/ref_r_1.r
+      - run: Rscript ref/ref1.r
 
       - id: Julia
         name: Julia_IP
